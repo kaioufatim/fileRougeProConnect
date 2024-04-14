@@ -1,0 +1,138 @@
+/* General Styles */
+.bg {
+    background-color: #f0f2f5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.child {
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transform: scale(1);
+    width: 100%; /* Ensure full width */
+    max-width: 800px; /* Set a max-width for responsiveness */
+}
+
+.child:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.profile {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #108ee9;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+h2:hover {
+    color: #009900;
+}
+
+h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Simplified Button Styling */
+button {
+    background-color: #108ee9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    width: 100%; /* Full width */
+    max-width: 100%; /* Ensure the button does not exceed its container's width */
+}
+
+button:hover {
+    background-color: #009900;
+    text-align: center;
+
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination a {
+    color: #108ee9;
+    padding: 8px 12px;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.pagination a:hover {
+    color: #ffffff;
+    background-color: #009900;
+}
+
+.pagination a.active {
+    color: #ffffff;
+    background-color: #009900;
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .child {
+        padding: 15px;
+    }
+
+    button {
+        padding: 10px 15px;
+        text-align: center;
+    }
+}
+button {
+    background-color: #108ee9;
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Increase padding for a larger button */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px; /* Increase font size for larger text */
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    width: 100%; /* Full width */
+    max-width: 100%; /* Ensure the button does not exceed its container's width */
+    justify-content: center; /* Align text horizontally in a flex container */
+    align-items: center; /* Align text vertically in a flex container */
+    display: flex; /* Use flex to center text both horizontally and vertically */
+}
+
+button:hover {
+    background-color: #009900;
+}

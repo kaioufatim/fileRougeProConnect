@@ -1,0 +1,56 @@
+<div class="bg" style="background-color: #f8f8f8" *ngIf="project">
+  <div class="project-details-container">
+    <div class="top-section">
+      <div nz-col nzSpan="8">
+        <img
+          class="profile"
+          style="height: 130px; width: 200px; border-radius: 10px"
+          [src]="avatarUrl"
+          alt="profile"
+        />
+      </div>
+      <div nz-col nzSpan="16">
+        <h2 style="cursor: pointer; color: #108ee9"></h2>
+        <h5>
+          Description: <b> {{ project.description }} </b> project Name :
+          <b> {{ project.projectName }} </b>
+        </h5>
+      </div>
+    </div>
+  </div>
+  <div class="resarvation-service">
+    <div>
+      <div nz-row>
+        <h2>Reservation service</h2>
+      </div>
+      <form nz-form [formGroup]="validateForm">
+        <div nz-row>
+          <div nz-col nzSpan="24">
+            <nz-form-item>
+              <nz-form-label [nzSpan]="24" nzFor="propositionDate">
+                Date of Reservation
+              </nz-form-label>
+              <nz-form-control [nzSpan]="24">
+                <nz-date-picker
+                  formControlName="propositionDate"
+                  name="propositionDate"
+                  id="propositionDate"
+                >
+                </nz-date-picker>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+        </div>
+        <button
+          nz-button
+          [nzType]="'primary'"
+          [disabled]="validateForm.invalid"
+          (click)="propositionService()"
+        >
+          Reserver
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="review-section"></div>
+</div>

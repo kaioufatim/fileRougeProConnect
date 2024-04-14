@@ -1,0 +1,17 @@
+#Database
+POSTGRES_SQL_USERNAME: postgres
+POSTGRES_SQL_PASSWORD: Kaiou
+POSTGRES_SQL_HOST: localhost #192.168.1.216
+POSTGRES_SQL_PORT: 5433
+POSTGRES_SQL_DB: registration
+
+#Server
+SERVER_PORT: 9000
+ACTIVE_PROFILE: dev
+
+#Email Config
+EMAIL_HOST: smtp.gmail.com
+EMAIL_PORT: 587
+EMAIL_ID: kaioufatimazahra@gmail.com #this is myAppPassword
+EMAIL_PASSWORD: dozj zegh hugg fynj
+VERIFY_EMAIL_HOST: http://localhost:${SERVER_PORT}

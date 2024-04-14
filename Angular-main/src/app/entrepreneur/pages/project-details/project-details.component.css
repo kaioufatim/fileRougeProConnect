@@ -1,0 +1,105 @@
+.bg {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   }
+   
+   .project-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   }
+   
+   .top-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+   }
+   
+   .profile {
+    height: 130px;
+    width: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+   }
+   
+   h2 {
+    cursor: pointer;
+    color: #108ee9;
+    font-size: 24px;
+    margin: 0;
+   }
+   
+   h5 {
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+   }
+   
+   .resarvation-service, .review-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   }
+   
+   .nz-form-item {
+    margin-bottom: 20px;
+   }
+   
+   .nz-form-control {
+    margin-top: 10px;
+   }
+   
+   button[nz-button] {
+    background-color: #108ee9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   }
+   
+   button[nz-button]:hover {
+    background-color: #0d73d1;
+   }
+   .resarvation-service {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+   }
+   
+   .resarvation-service h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+   }
+   
+   .nz-form-item {
+    margin-bottom: 20px;
+   }
+   
+   .nz-form-control {
+    margin-top: 10px;
+   }
+   
+   button[nz-button] {
+    background-color: #108ee9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   }
+   
+   button[nz-button]:hover {
+    background-color: #0d73d1;
+   }
+   

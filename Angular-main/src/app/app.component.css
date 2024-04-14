@@ -1,0 +1,40 @@
+/* General styles for the header */
+nz-header {
+    background-color: #333; /* Dark background for the header */
+    color: white; /* Text color */
+    padding: 10px 0; /* Padding for the header */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Align items on opposite ends */
+   }
+   
+   /* Styling for the title */
+   nz-header h2 {
+    margin: 0; /* Remove default margin */
+    padding-left: 10px; /* Padding for the title */
+   }
+   
+   /* Styling for the navigation links container */
+   .nav-links {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align links to the right */
+   }
+   
+   /* Styling for the navigation links */
+   .nav-links a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    margin-left: 20px; /* Space between links */
+    transition: color 0.3s ease; /* Smooth color transition */
+   }
+   
+   /* Styling for the active navigation link */
+   .nav-links a.active {
+    color: #007bff; /* Active link color */
+    font-weight: bold; /* Make active link bold */
+   }
+   
+   /* Optional: Add hover effect for links */
+   .nav-links a:hover {
+    color: #007bff; /* Hover color */
+   }
+   

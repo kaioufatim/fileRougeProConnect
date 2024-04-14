@@ -1,0 +1,59 @@
+<!--<div class="parent">
+    <div class="child">
+        <div nz-row class="imgDiv">
+            <h2 style="margin-left: 230px;">Post Review</h2>
+        </div>
+        <form nz-form [formGroup]="validateForm" (ngSubmit)="giveReview()">
+            <div nz-col nzSpan="24">
+                <nz-form-item>
+                    <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="this Input isRequired !">
+                        <textarea rows="5" nz-input placeholder="write a Review" formControlName="review"></textarea>
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+        <div nz-row>
+            <div nz-col nzSpan="24">
+                <nz-form-item>
+                    <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="this Input isRequired !">
+                        <nz-rate rows="5" nz-input placeholder="write a Review" formControlName="rating"></nz-rate>
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+        </div>
+
+        <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'"> Post</button>
+        </form>
+
+    </div>
+
+</div>-->
+
+<div class="parent">
+    <div class="child">
+        <div nz-row class="imgDiv">
+            <h2 style="margin-left: 230px;">Post Review</h2>
+        </div>
+        <form nz-form [formGroup]="validateForm" (ngSubmit)="giveReview()">
+            <div nz-col nzSpan="24">
+                <nz-form-item>
+                    <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="Ce champ est requis !">
+                        <textarea rows="5" nz-input placeholder="Écrire une critique" formControlName="review"></textarea>
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+            <div nz-row>
+                <div nz-col nzSpan="24">
+                    <nz-form-item>
+                        <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="Ce champ est requis !">
+                            <nz-rate nz-input placeholder="Noter" formControlName="rating"></nz-rate>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+            </div>
+
+            <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" type="submit">Poster</button>
+        </form>
+    </div>
+</div>

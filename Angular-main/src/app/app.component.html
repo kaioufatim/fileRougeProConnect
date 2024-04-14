@@ -1,0 +1,173 @@
+<div *ngIf="!iscreateurLoggedIn && !isentrepreneurLoggedIn">
+  <nz-header>
+    <div>
+      <h2 style="color: white; padding-left: 10px">
+        Service de l'entreprenariat
+      </h2>
+    </div>
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/home" routerLinkActive="active"
+        >Home</a
+      >
+      <a
+        nz-button
+        nzType="link"
+        routerLink="/register"
+        routerLinkActive="active"
+        >Register</a
+      >
+      <a nz-button nzType="link" routerLink="/login" routerLinkActive="active"
+        >Login</a
+      >
+    </div>
+  </nz-header>
+</div>
+<div *ngIf="isentrepreneurLoggedIn">
+  <nz-header
+    class="main-header"
+    nz-row
+    nzType="fles"
+    style="background-color: #bb2929"
+  >
+    <div>
+      <h2 style="color: white; padding-left: 10px">
+        Service Entreprenariat System
+      </h2>
+    </div>
+    <div class="nav-links">
+      <a
+        nz-button
+        nzType="link"
+        routerLink="/entrepreneur/dashboard"
+        routerLinkActive="active"
+        >Dashboard</a
+      >
+      <a
+        nz-button
+        nzType="link"
+        routerLink="entrepreneur/propositions"
+        routerLinkActive="active"
+        >Propositions</a
+      >
+      <a nz-button nzType="link" (click)="logout()" routerLinkActive="active"
+        >Logout</a
+      >
+    </div>
+  </nz-header>
+  <nz-sider
+    nzCollapsible
+    nzBreakpoint="lg"
+    [nzCollapsedWidth]="0"
+    class="mobile-sidenav"
+  >
+    <ul class="nav-links" nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item>
+        <a
+          nz-button
+          nzType="link"
+          routerLink="/entrepreneur/dashboard"
+          routerLinkActive="active"
+          >Dashboard</a
+        >
+      </li>
+      <li nz-menu-item>
+        <a
+          nz-button
+          nzType="link"
+          routerLink="/entrepreneur/propositions"
+          routerLinkActive="active"
+          >Propositions</a
+        >
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" (click)="logout()" routerLinkActive="active"
+          >Logout</a
+        >
+      </li>
+    </ul>
+  </nz-sider>
+</div>
+
+<div *ngIf="iscreateurLoggedIn">
+  <nz-header
+    class="main-header"
+    nz-row
+    nzType="fles"
+    style="background-color: #bb2929"
+  >
+    <div>
+      <h2 style="color: white; padding-left: 10px">
+        Service Entreprenariat System
+      </h2>
+    </div>
+    <div class="nav-links">
+      <a
+        nz-button
+        nzType="link"
+        routerLink="/createur/dashboard"
+        routerLinkActive="active"
+        >Dashboard</a
+      >
+      <a
+        nz-button
+        nzType="link"
+        routerLink="/createur/project"
+        routerLinkActive="active"
+      >
+        Post Project</a
+      >
+      <a
+        nz-button
+        nzType="link"
+        routerLink="/createur/projects"
+        routerLinkActive="active"
+        >Projects</a
+      >
+      <a nz-button nzType="link" (click)="logout()" routerLinkActive="active"
+        >Logout</a
+      >
+    </div>
+  </nz-header>
+  <nz-sider
+    nzCollapsible
+    nzBreakpoint="lg"
+    [nzCollapsedWidth]="0"
+    class="mobile-sidenav"
+  >
+    <ul class="nav-links" nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item>
+        <a
+          nz-button
+          nzType="link"
+          routerLink="/createur/dashboard"
+          routerLinkActive="active"
+          >Dashboard</a
+        >
+      </li>
+      <li nz-menu-item>
+        <a
+          nz-button
+          nzType="link"
+          routerLink="/createur/project"
+          routerLinkActive="active"
+          >Project</a
+        >
+      </li>
+      <li nz-menu-item>
+        <a
+          nz-button
+          nzType="link"
+          routerLink="/createur/projects"
+          routerLinkActive="active"
+          >projects</a
+        >
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" (click)="logout()" routerLinkActive="active"
+          >Logout</a
+        >
+      </li>
+    </ul>
+  </nz-sider>
+</div>
+<router-outlet></router-outlet>

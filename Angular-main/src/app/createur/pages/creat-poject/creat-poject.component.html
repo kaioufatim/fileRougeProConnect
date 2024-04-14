@@ -1,0 +1,51 @@
+<div style="background-color: aliceblue;">
+    <div class="parent">
+        <div class="child">
+            <div nz-row class="imgDiv">
+                <h2 style="margin-left: 230px;"> Create project</h2>
+            </div>
+            <form nz-form [formGroup]="validateForm" (ngSubmit)="postProject()">
+                <div nz-row>
+                    <div nz-col [nzMd]="24" [nzSm]="24" [nzXs]="24">
+                        <div class="profile-badge">
+                            <label for="upload_profile_image" class="upload-label" *ngIf="selectedFile">
+                                <img class="profile" [src]="imagePreview" alt="profile">
+                            </label>
+                            <input type="file" nz-button nzType="primary" accept="image/x-png,image/gif,image/jpeg"
+                            (change)="OnFileSelected($event)"/>
+                            <button nz-button nzshape="circle"></button>
+                        </div>
+                    </div>
+
+                    <div nz-col nzSpan="24" style="margin: 20px;">
+                        <nz-form-item>
+                            <nz-form-control nzHashFeedback [nzXs]="24" nzErrorTip="this input is required">
+                                <input nz-input placeholder="Project Name" formControlName="projectName"/>
+                            </nz-form-control>
+                        </nz-form-item>
+
+                    </div>
+
+                    <div nz-col nzSpan="24" style="margin: 20px;">
+                        <nz-form-item>
+                            <nz-form-control nzHashFeedback [nzXs]="24" nzErrorTip="this input is required">
+                                <input nz-input placeholder="Description" formControlName="description"/>
+                            </nz-form-control>
+                        </nz-form-item>
+
+                    </div>
+
+                </div>
+
+           <!--     <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">
+                    Ajouter
+
+                </button>-->
+                <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" type="submit" [disabled]="!validateForm.valid">
+                    Ajouter
+                </button>
+                
+            </form>
+        </div>
+    </div>
+</div>

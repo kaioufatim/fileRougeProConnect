@@ -1,0 +1,43 @@
+<div class="bg">
+  <div style="margin-top: 10px" class="child" *ngFor="let project of projects">
+    <div nz-row>
+      <div nz-col nzSpam="8">
+        <img
+          class="profile"
+          [src]="updateImg(project.returnedImg)"
+          style="height: 130px; width: 200px; border-radius: 10px"
+        />
+      </div>
+      <div nz-col nzSpan="16">
+        <h2 style="cursor: pointer; color: #108ee9">
+          {{ project.projectName }}
+        </h2>
+        <hr />
+        <h5>
+          Description: <b>{{ project.description }}</b>
+        </h5>
+        <hr />
+        <div style="float: right">
+          <button
+            nzSize="small"
+            nz-button
+            nzType="primary"
+            routerLink="/createur/update/{{ project.id }}"
+          >
+            Update
+          </button>
+          <button
+          (click)="deleteProject(project.id)"
+            style="margin-left: 10px"
+            nzSize="small"
+            nz-button
+            nzType="primary"
+            nzDanger
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

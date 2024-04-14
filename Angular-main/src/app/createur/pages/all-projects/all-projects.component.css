@@ -1,0 +1,36 @@
+/* General Styles */
+.bg {
+    background-color: #f0f2f5; /* Light background color */
+    padding: 20px; /* Add some padding around the container */
+}
+
+.child {
+    background-color: #ffffff; /* White background for each project card */
+    border-radius: 5px; /* Rounded corners for each card */
+    margin-bottom: 20px; /* Space between each project card */
+    padding: 20px; /* Padding inside each card */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+}
+
+.profile {
+    border-radius: 10px; /* Match the border-radius of the image */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .child {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+}
+
+/* Button Styles */
+button {
+    margin-top: 10px; /* Space above buttons */
+}
+
+/* Hover Effects */
+.child:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}

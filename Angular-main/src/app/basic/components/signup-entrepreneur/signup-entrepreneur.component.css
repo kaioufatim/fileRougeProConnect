@@ -1,0 +1,63 @@
+/* General styles for the form container */
+.bg {
+    background-color: #f0f2f5; /* Light background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+   }
+   
+   /* Styling for the form itself */
+   form {
+    background-color: #ffffff; /* White background for the form */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 145%; /* Full width */
+    max-width: 1000px; /* Increased maximum width for the form */
+    margin: 0 auto; /* Center the form */
+   }
+   
+   /* Styling for form items */
+   .nz-form-item {
+    margin-bottom: 20px; /* Space between form items */
+   }
+   
+   /* Styling for input fields */
+   input {
+    border: 1px solid #d9d9d9; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding inside the input */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Ensure padding and border are included in the total width */
+   }
+   
+   /* Styling for the submit button */
+   .login-form-button {
+    width: 100%; /* Full width */
+    margin-top: 20px; /* Space above the button */
+    background-color: #1890ff; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding inside the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+   }
+   
+   .login-form-button:hover {
+    background-color: #40a9ff; /* Hover background color */
+   }
+   
+   /* Optional: Styling for the link */
+   a {
+    color: #1890ff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin-top: 10px; /* Space above the link */
+   }
+   
+   a:hover {
+    color: #40a9ff; /* Hover color */
+   }
+   
