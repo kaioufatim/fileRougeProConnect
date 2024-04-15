@@ -1,38 +1,41 @@
+#spring:
+#  application:
+#    name: project
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+##    url: jdbc:postgresql://localhost:5433/social-
+#    url: jdbc:postgresql://localhost:5433/registration
+#
+#    username: postgres
+#    password: Kaiou
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    database: postgresql
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#    show-sql: true
+#
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: kaioufatimazahra@gmail.com
+#    password: dozj zegh hugg fynj
+#
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#          ssl:
+#            trust: smtp.gmail.com
+#
+#
+#
+#project:
+#  app:
+#    jwtSecret: scscsccscsytuytuccuuuuuttttttydfhdhdjdjhwsefqs
+#    jwtExpirationMs: 86400000
 spring:
-  application:
-    name: project
-  datasource:
-    driver-class-name: org.postgresql.Driver
-#    url: jdbc:postgresql://localhost:5433/social-
-    url: jdbc:postgresql://localhost:5433/registration
-
-    username: postgres
-    password: Kaiou
-  jpa:
-    hibernate:
-      ddl-auto: update
-    database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    show-sql: true
-
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: kaioufatimazahra@gmail.com
-    password: dozj zegh hugg fynj
-
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-          ssl:
-            trust: smtp.gmail.com
-
-
-
-project:
-  app:
-    jwtSecret: scscsccscsytuytuccuuuuuttttttydfhdhdjdjhwsefqs
-    jwtExpirationMs: 86400000
+  profiles:
+    active: test

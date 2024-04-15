@@ -89,6 +89,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+import static org.springframework.web.servlet.function.RequestPredicates.headers;
+
 
 @Configuration
 @EnableWebSecurity
@@ -135,7 +137,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
             //    .anyRequest().authenticated();
 
-        http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+        http.headers(headers -> headers.frameOptions().sameOrigin())
+                .addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 }
 

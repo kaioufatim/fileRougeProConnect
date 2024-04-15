@@ -21,28 +21,20 @@ public class Project {
     private String domaineName;
     private String description;
     private String projectName;
-//    @Lob
-//    @Column(columnDefinition = "longblob")
-//    private  byte[] img;
-    @Column(columnDefinition = "bytea")
-    private byte[] img;
+//in postgres database
 
+//    @Column(columnDefinition = "bytea")
+//    private byte[] img;
+    //For the H2 databae
+    @Lob // Assuming image is stored as byte array
+    @Basic(fetch = FetchType.LAZY) // Optional: Configure fetching strategy for large BLOBs
+    private byte[] img;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id")
     @OnDelete(action = OnDeleteAction.CASCADE)
     private User user;
-    //    public ProjectDto getProjectDto(){
-//        ProjectDto projectDto =new ProjectDto();
-//        projectDto.setDomaineName(domaineName);
-//        projectDto.setDescription(description);
-//        projectDto.setCreatorName(user.getName());
-//        projectDto.setProjectName(projectName);
-//
-//        projectDto.setReturnedImg(img);
-//
-//        return projectDto;
-//    }
+
 public ProjectDto getProjectDto() {
     ProjectDto projectDto = new ProjectDto();
     projectDto.setId(this.getId()); // Map project ID
